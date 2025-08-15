@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function visualizar(){
+            let opcion;
+            opcion = document.getElementById("opcion").value;
+            if(opcion == "ver")
+            {
+                document.getElementById("formulario").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("formulario").style.display = "none";
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+<select id="opcion" onchange="visualizar()">
+    <option value="ver">Ver</option>
+    <option value="ocultar">Ocultar</option>
+</select>
+
+    <div id="formulario" style="display: none;">
+        <h1>Formulario</h1>
+        <input id="nombre" type="text" placeholder="Digite su Nombre">
+        <br>
+        <input id="correo" type="email" placeholder="Digite su Correo">
+    </div>
+</body>
+</html>

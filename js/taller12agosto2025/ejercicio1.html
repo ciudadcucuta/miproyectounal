@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <script src="js/encuesta.js"></script>
+    <style>
+        html{
+            font-family: Verdana;
+            font-weight: 500;
+        }
+        .centrar{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <header>
+        <h1>Encuesta de Satisfacción</h1>
+    </header>
+    <main class="centrar">
+        <fieldset>
+            <legend>
+                <h2>Preguntas</h2>
+            </legend>
+            <div>
+                <p>1. ¿Qué tan satisfecho está con nuestro servicio?</p>
+                <select id="p1">
+                    <option value="1">SI</option>
+                    <option value="0">NO</option>
+                </select>
+            </div>
+            <div>
+                <p>2. ¿Nuestro personal demostró tener conocimiento?</p>
+                <select id="p2">
+                    <option value="1">SI</option>
+                    <option value="0">NO</option>
+                </select>
+            </div>
+            <div>
+                <p>3. ¿El tiempo de Respuesta fue razonable?</p>
+                <select id="p3">
+                    <option value="1">SI</option>
+                    <option value="0">NO</option>
+                </select>
+            </div>
+            <div>
+                <p>4. ¿Fueron amables al tomar su turno?</p>
+                <select id="p4">
+                    <option value="1">SI</option>
+                    <option value="0">NO</option>
+                </select>
+            </div>
+            <div>
+                <p>5. ¿Nos recomendaría con sus familiares y amigos?</p>
+                <select id="p5">
+                    <option value="1">SI</option>
+                    <option value="0">NO</option>
+                </select>
+            </div>
+            <br><br>
+            <div>
+                <button onclick="satisfaccion()">Enviar Encuesta</button>
+            </div>
+        </fieldset>
+        
+    </main>
+    <footer>
+        <p>Hecho por @joselacevedo</p>
+    </footer>
+
+</body>
+
+</html>

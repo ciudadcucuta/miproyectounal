@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Sangre</title>
+    <script>
+        function calculardonante(){
+            let nombre = document.getElementById("nombre").value;
+            let cedula = document.getElementById("cedula").value;
+            let tiposangre = document.getElementById("tiposangre").value;
+            const pasajefull= 3450;
+            let porcentaje = 0;
+
+            /*
+TIPO / UNIDADES
+O = 3287 – 15%
+A = 1369 – 20%
+B = 596 -25%
+AB = 32 – 30%
+
+            */
+
+            switch(tiposangre)
+            {
+                case "O":
+                    porcentaje = 15;
+                    break;
+                case "A":
+                    porcentaje = 20;
+                    break;
+                case "B":
+                    porcentaje = 25;
+                    break;
+                case "AB":
+                    porcentaje = 30;
+                    break;
+                default:
+                    alert("Su opción no es Valida");
+                          
+
+
+            }
+
+            let valordescuento = pasajefull * (porcentaje/100);
+            let valorapagar = pasajefull - valordescuento;
+            let mensaje = "Nombre Donante: " + nombre + "\nCedula: " + cedula + "\nPorcentaje Descuento:" + porcentaje + "%" + "\nValor Descuento: $" + valordescuento + "\nValor a Pagar: $" + valorapagar;
+            alert(mensaje);
+            document.getElementById("donante").innerText = mensaje;
+
+        }
+    </script>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Datos del Donante</legend>
+        <label>Nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre Completo">
+        <br>
+        <label>Cedula</label>
+        <input type="number" id="cedula" placeholder="numero de Cédula">
+        <br>
+        <label>Tipos de Sangre Donante</label>
+        <select id="tiposangre">
+            <option value="ninguno">Seleccione</option>
+            <option value="O">Tipo O</option>
+            <option value="A">Tipo A</option>
+            <option value="B">Tipo B</option>
+            <option value="AB">Tipo AB</option>
+        </select>
+        <button type="button" onclick="calculardonante()">Enviar Información</button>
+    </fieldset>
+    <p id="donante"></p>
+</body>
+</html>
